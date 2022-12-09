@@ -6,4 +6,4 @@ pdfminer
 xlsxwriter
 xlwings
 pandas
-win32com
+pywin32
