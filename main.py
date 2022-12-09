@@ -2,9 +2,7 @@ import os
 import urllib
 from flask import Flask, make_response, jsonify, request
 from flask_cors import CORS
-from dotenv import load_dotenv
 from PDFMinerFINAL import capture_invoice
-load_dotenv()
 
 app = Flask('eltanin-miner')
 CORS(app)
@@ -31,4 +29,9 @@ def capture():
     response = jsonify({'data': result_capture})
     return make_response(response)
 
-app.run(debug=True, port=os.getenv("PORT", default=5000))
+try:
+    port = os.environ['PORT']
+except:
+    port = 5000
+
+app.run(debug=True, port=port)
