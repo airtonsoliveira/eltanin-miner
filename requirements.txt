@@ -6,4 +6,4 @@ pdfminer
 xlsxwriter
 xlwings
 pandas
-pywin32==302
+pywin32==302;platform_system == "Windows"
