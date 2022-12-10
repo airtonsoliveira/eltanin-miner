@@ -1,4 +1,3 @@
-from win32com import client
 import xlsxwriter
 import xlwings as xw
 import pandas as pd
@@ -6,7 +5,7 @@ import pythoncom
 
 def read_result():
 
-    client.Dispatch("Excel.Application",pythoncom.CoInitialize())
+    pythoncom.CoInitialize()
 
     excel_app = xw.App(visible=False)
     excel_book_dados = excel_app.books.open('dados_fatura.xlsx')

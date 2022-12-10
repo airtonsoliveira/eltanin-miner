@@ -29,9 +29,4 @@ def capture():
     response = jsonify({'data': result_capture})
     return make_response(response)
 
-try:
-    port = os.environ['PORT']
-except:
-    port = 5000
-
-app.run(debug=True, port=port)
+app.run(debug=True)
