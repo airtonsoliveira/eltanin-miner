@@ -2,6 +2,7 @@
 flask
 flask_cors
 pdfminer
+pythoncom
 xlsxwriter
 xlwings
 pandas
